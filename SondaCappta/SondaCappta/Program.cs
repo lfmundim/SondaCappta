@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+
+using Microsoft.Extensions.DependencyInjection;
+
 using SondaCappta.Models;
 using SondaCappta.Services;
-using System;
-using System.Text.RegularExpressions;
 
 namespace SondaCappta
 {

@@ -5,7 +5,13 @@
     /// </summary>
     public enum TurnDirection
     {
+        /// <summary>
+        /// Left
+        /// </summary>
         L,
+        /// <summary>
+        /// Right
+        /// </summary>
         R
     }
 }

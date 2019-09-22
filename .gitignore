@@ -1,1 +1,10 @@
 **/.vs
+**/bin
+**/obj
+**/**/obj
+**/**/bin
+**/**/**/bin
+**/**/**/obj
+/bin
+/obj
+./SondaCappta/SondaCappta/bin

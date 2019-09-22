@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta", "SondaCappta\SondaCappta.csproj", "{263B4B49-9D0B-4F53-9B02-D327C04C4623}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta.Models", "SondaCappta.Models\SondaCappta.Models.csproj", "{81B5F238-F662-40F7-A679-EFEDA65CD613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta.UnitTests", "SondaCappta.UnitTests\SondaCappta.UnitTests.csproj", "{B5579416-7013-492D-913E-F1F4E4D46006}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{263B4B49-9D0B-4F53-9B02-D327C04C4623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{263B4B49-9D0B-4F53-9B02-D327C04C4623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{263B4B49-9D0B-4F53-9B02-D327C04C4623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B5F238-F662-40F7-A679-EFEDA65CD613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B5F238-F662-40F7-A679-EFEDA65CD613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B5F238-F662-40F7-A679-EFEDA65CD613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B5F238-F662-40F7-A679-EFEDA65CD613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5579416-7013-492D-913E-F1F4E4D46006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5579416-7013-492D-913E-F1F4E4D46006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5579416-7013-492D-913E-F1F4E4D46006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5579416-7013-492D-913E-F1F4E4D46006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

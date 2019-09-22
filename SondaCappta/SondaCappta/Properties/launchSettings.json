@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SondaCappta": {
+      "commandName": "Project",
+      "commandLineArgs": "--pause"
+    }
+  }
+}

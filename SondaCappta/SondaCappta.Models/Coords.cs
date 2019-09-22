@@ -44,5 +44,18 @@
         {
             return $"{XCoord} {YCoord}";
         }
+
+        /// <summary>
+        /// Checks if the <paramref name="obj"/> coordinates are the same of the base <c>Coord</c>.
+        /// </summary>
+        /// <param name="obj">If not a <c>Coord</c>, returns <c>false</c></param>
+        public override bool Equals(object obj)
+        {
+            if (obj is Coords coords)
+            {
+                return coords.XCoord == XCoord && coords.YCoord == YCoord;
+            }
+            return base.Equals(obj);
+        }
     }
 }

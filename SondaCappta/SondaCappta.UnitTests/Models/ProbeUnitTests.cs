@@ -27,7 +27,6 @@ namespace SondaCappta.UnitTests.Models
             Enum.TryParse<TurnDirection>(turnDirection, out var direction);
             var probe = new Probe
             {
-                Field = _referenceField,
                 Direction = currentDirection
             };
             
@@ -45,11 +44,10 @@ namespace SondaCappta.UnitTests.Models
         {
             var probe = new Probe
             {
-                Field = _referenceField,
                 Direction = facingDirection
             };
 
-            var couldMove = probe.TryMoveForward();
+            var couldMove = _referenceField.TryMoveForward(probe);
 
             couldMove.ShouldBe(canMove);
             probe.GetPosition().ShouldBe(expectedPosition);

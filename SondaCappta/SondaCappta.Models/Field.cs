@@ -1,4 +1,7 @@
-﻿namespace SondaCappta.Models
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace SondaCappta.Models
 {
     /// <summary>
     /// (Rectangular) Field to be explored by the probe
@@ -14,6 +17,7 @@
         {
             XDimension = xDimension;
             YDimension = yDimension;
+            Probes = new List<Probe>();
         }
 
         /// <summary>
@@ -27,14 +31,48 @@
         public int YDimension { get; set; } = 0;
 
         /// <summary>
-        /// Checks if a given <paramref name="coord"/> is out of the field
+        /// Probes currently on the field
         /// </summary>
-        /// <param name="coord"></param>
-        /// <returns><c>true</c> if the given coord is outside of the field</returns>
-        public bool IsOutOfBounds(Coords coord) => IsEitherCoordGreaterThanDimension(coord) || IsEitherCoordNegative(coord);
+        public List<Probe> Probes { get; set; }
+
+        /// <summary>
+        /// Tries to move the Probe on the current facing direction
+        /// </summary>
+        /// <returns><c>false</c> if the probe couldn't be moved</returns>
+        public bool TryMoveForward(Probe probe)
+        {
+            var attemptDestination = new Coords(probe.Coords);
+
+            switch (probe.Direction)
+            {
+                case Direction.N:
+                    attemptDestination.YCoord++;
+                    break;
+                case Direction.S:
+                    attemptDestination.YCoord--;
+                    break;
+                case Direction.E:
+                    attemptDestination.XCoord++;
+                    break;
+                case Direction.W:
+                    attemptDestination.XCoord--;
+                    break;
+                default:
+                    break;
+            }
+
+            var possibleMove = !IsOutOfBounds(attemptDestination) && !IsProbeBlockingTheWay(attemptDestination);
+            probe.Coords = possibleMove ? probe.Coords = attemptDestination : probe.Coords;
+
+            return possibleMove;
+        }
+
+        private bool IsOutOfBounds(Coords coord) => IsEitherCoordGreaterThanDimension(coord) || IsEitherCoordNegative(coord);
 
         private bool IsEitherCoordNegative(Coords coord) => coord.XCoord < 0 || coord.YCoord < 0;
 
         private bool IsEitherCoordGreaterThanDimension(Coords coord) => coord.XCoord > XDimension || coord.YCoord > YDimension;
+
+        private bool IsProbeBlockingTheWay(Coords coord) => Probes.Any(p => p.Coords.Equals(coord));
     }
 }

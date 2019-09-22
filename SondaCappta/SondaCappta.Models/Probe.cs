@@ -8,7 +8,6 @@
         public Probe()
         {
             Coords = new Coords();
-            Field = new Field();
         }
 
         /// <summary>
@@ -20,11 +19,6 @@
         /// Probe's current facing direction
         /// </summary>
         public Direction Direction { get; set; }
-
-        /// <summary>
-        /// Current field the probe is on
-        /// </summary>
-        public Field Field { get; set; }
 
         /// <summary>
         /// Builds a <c>string</c> for the Probe's current position and direction
@@ -60,37 +54,6 @@
                 default:
                     break;
             }
-        }
-
-        /// <summary>
-        /// Tries to move the Probe on the current facing direction
-        /// </summary>
-        /// <returns><c>false</c> if the probe couldn't be moved</returns>
-        public bool TryMoveForward()
-        {
-            var attemptDestination = new Coords(Coords);
-
-            switch (Direction)
-            {
-                case Direction.N:
-                    attemptDestination.YCoord++;
-                    break;
-                case Direction.S:
-                    attemptDestination.YCoord--;
-                    break;
-                case Direction.E:
-                    attemptDestination.XCoord--;
-                    break;
-                case Direction.W:
-                    attemptDestination.XCoord++;
-                    break;
-                default:
-                    break;
-            }
-
-            var possibleMove = !Field.IsOutOfBounds(attemptDestination);
-            Coords = possibleMove ? Coords = attemptDestination : Coords;
-            return possibleMove;
         }
     }
 }

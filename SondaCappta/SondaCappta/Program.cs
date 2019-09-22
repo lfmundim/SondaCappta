@@ -25,7 +25,7 @@ namespace SondaCappta
             }
             else if (readType.Equals("2"))
             {
-                inlineInputFacade.ReadInlineInput();
+                inlineInputFacade.ReadInput();
             }
         }
     }

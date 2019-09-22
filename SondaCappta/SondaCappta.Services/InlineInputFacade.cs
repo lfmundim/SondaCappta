@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace SondaCappta.Services
 {
-    public class InlineInputFacade : IInlineInputFacade
+    public class InlineInputFacade : IInputFacade
     {
         private readonly Field _field;
         private static readonly Regex _dimensionInput = new Regex(@"^(\d \d)\s*$");
@@ -19,7 +19,10 @@ namespace SondaCappta.Services
             _field = field;
         }
 
-        public void ReadInlineInput()
+        /// <summary>
+        /// Executes the logic reading from inline data
+        /// </summary>
+        public void ReadInput()
         {
             try
             {

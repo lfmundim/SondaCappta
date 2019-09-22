@@ -30,7 +30,7 @@ namespace SondaCappta.UnitTests.Facades
             Console.SetIn(stringReader);
 
             var facade = new InlineInputFacade(_field);
-            facade.ReadInlineInput();
+            facade.ReadInput();
 
             _field.Probes.Count.ShouldBe(2);
             _field.Probes[0].GetPosition().ShouldBe(expectedProbeAOutcome);

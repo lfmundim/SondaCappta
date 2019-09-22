@@ -7,9 +7,9 @@ namespace SondaCappta.Services
 {
     public class BaseInputFacade
     {
-        private static readonly Regex _dimensionInput = new Regex(@"^(\d \d)\s*$");
-        private static readonly Regex _commandsInput = new Regex(@"^([LRM]+)\s*$");
-        private static readonly Regex _positionInput = new Regex(@"^(\d \d [NEWS])\s*$");
+        private static readonly Regex DimensionInput = new Regex(@"^(\d \d)\s*$");
+        private static readonly Regex CommandsInput = new Regex(@"^([LRM]+)\s*$");
+        private static readonly Regex PositionInput = new Regex(@"^(\d \d [NEWS])\s*$");
 
         private readonly Field _field;
 
@@ -82,7 +82,7 @@ namespace SondaCappta.Services
 
         private void ExecuteCommandsFromString(string input, Probe probe)
         {
-            if (!_commandsInput.IsMatch(input))
+            if (!CommandsInput.IsMatch(input))
             {
                 throw new ArgumentException();
             }
@@ -102,7 +102,7 @@ namespace SondaCappta.Services
 
         private Probe AddProbeFromString(string input)
         {
-            if (!_positionInput.IsMatch(input))
+            if (!PositionInput.IsMatch(input))
             {
                 throw new ArgumentException();
             }
@@ -116,7 +116,7 @@ namespace SondaCappta.Services
 
         private void BuildFieldFromString(string input)
         {
-            if (!_dimensionInput.IsMatch(input))
+            if (!DimensionInput.IsMatch(input))
             {
                 throw new ArgumentException();
             }

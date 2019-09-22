@@ -8,7 +8,7 @@ namespace SondaCappta
 {
     public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection();
             var field = new Field();

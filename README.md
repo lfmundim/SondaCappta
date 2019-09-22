@@ -29,3 +29,4 @@ The following instructions were not explicit, therefore I took the liberty of de
     }
 ```
 
+The basic test case from the Gist can be found on the unit tests project, both using file and inline.

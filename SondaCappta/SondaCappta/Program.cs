@@ -13,15 +13,15 @@ namespace SondaCappta
             var serviceProvider = new ServiceCollection();
             var field = new Field();
             var inlineInputFacade = new InlineInputFacade(field);
+            var fileInputFacade = new FileInputFacade(field);
 
             serviceProvider.AddSingleton(field);
-            serviceProvider.AddSingleton(inlineInputFacade);
 
             Console.WriteLine("> File or inline input?\n 1- File \n 2- Inline");
             var readType = Console.ReadLine();
             if (readType.Equals("1"))
             {
-
+                fileInputFacade.ReadInput();
             }
             else if (readType.Equals("2"))
             {

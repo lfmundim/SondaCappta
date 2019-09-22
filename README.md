@@ -1,5 +1,5 @@
 # Sonda - Cappta
-Repo created as an attempt at [this test](https://gist.github.com/rmterra/31f2b4f589250839550f685d8873d935).
+Repo created as an attempt at [this test](https://gist.github.com/rmterra/31f2b4f589250839550f685d8873d935). Instead of creating a more complex approach, such as an UI or WebApp, I decided to make it as modular as possible and test it as well, to make it possible to reuse or even extract as a NuGet package (if someone ever needs it). This approach was used due to the high impact of reusable code on teamwork environments.
 
 The following instructions were not explicit, therefore I took the liberty of defining them:
 1. **Probe Collision:** it was not clear if probes could occupy the same coordinates as each other. Decision: there **is** probe collision and they **cannot** occupy the same coordinates. On a given collision, the probe will stay in place.

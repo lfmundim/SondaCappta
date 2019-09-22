@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta.Models", "Sonda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta.UnitTests", "SondaCappta.UnitTests\SondaCappta.UnitTests.csproj", "{B5579416-7013-492D-913E-F1F4E4D46006}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SondaCappta.Services", "SondaCappta.Services\SondaCappta.Services.csproj", "{7618CBB1-BE40-41F7-A12F-271148318CF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B5579416-7013-492D-913E-F1F4E4D46006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5579416-7013-492D-913E-F1F4E4D46006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5579416-7013-492D-913E-F1F4E4D46006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7618CBB1-BE40-41F7-A12F-271148318CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7618CBB1-BE40-41F7-A12F-271148318CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7618CBB1-BE40-41F7-A12F-271148318CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7618CBB1-BE40-41F7-A12F-271148318CF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

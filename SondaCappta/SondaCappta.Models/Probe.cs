@@ -1,4 +1,6 @@
-﻿namespace SondaCappta.Models
+﻿using System;
+
+namespace SondaCappta.Models
 {
     /// <summary>
     /// Probe reference class
@@ -8,6 +10,18 @@
         public Probe()
         {
             Coords = new Coords();
+        }
+
+        public Probe(string xCoord, string yCoord, string directionString)
+        {
+            Enum.TryParse<Direction>(directionString, out var direction);
+
+            Coords = new Coords
+            {
+                XCoord = Convert.ToInt32(xCoord),
+                YCoord = Convert.ToInt32(yCoord)
+            };
+            Direction = direction;
         }
 
         /// <summary>

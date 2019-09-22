@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SondaCappta.Models\SondaCappta.Models.csproj" />
+    <ProjectReference Include="..\SondaCappta.Services\SondaCappta.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -27,6 +27,7 @@ namespace SondaCappta.UnitTests.Models
             Enum.TryParse<TurnDirection>(turnDirection, out var direction);
             var probe = new Probe
             {
+                Coords = new Coords(),
                 Direction = currentDirection
             };
             
@@ -36,14 +37,15 @@ namespace SondaCappta.UnitTests.Models
         }
 
         [Theory]
-        [InlineData(Direction.E, false, "0 0 E")]
         [InlineData(Direction.S, false, "0 0 S")]
-        [InlineData(Direction.W, true, "1 0 W")]
+        [InlineData(Direction.W, false, "0 0 W")]
+        [InlineData(Direction.E, true, "1 0 E")]
         [InlineData(Direction.N, true, "0 1 N")]
         public void TryMoveForward_UnitTests(Direction facingDirection, bool canMove, string expectedPosition)
         {
             var probe = new Probe
             {
+                Coords = new Coords(),
                 Direction = facingDirection
             };
 
